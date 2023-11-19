@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "SLEGuide",
+    "slug": "SLEGuide",
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.fourinfour.SLEGuide",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyCkQoBPPdhHOJ0xHkgkIPfD5gam0Bp8k0w"
+        }
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "59e14dcc-22a8-4c21-a397-a3d91460ef66"
+      }
+    }
+  }
+}
