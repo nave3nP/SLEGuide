@@ -71,7 +71,7 @@ function Main(props) {
               style={styles.image4}
             ></Image>
             </TouchableOpacity>
-            <TouchableOpacity onPress={()=>{navigation.navigate("Guides")}}>
+            <TouchableOpacity onPress={()=>{navigation.navigate("Dashboard")}}>
             <Image
               source={require("../../assets/Images/guide.png")}
               resizeMode="contain"

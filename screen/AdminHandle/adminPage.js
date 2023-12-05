@@ -1,4 +1,6 @@
 import react from "react";
+import { getAuth, signOut } from "firebase/auth";
+
 import {
   View,
   TextInput,
@@ -14,6 +16,15 @@ import { useNavigation } from "@react-navigation/native";
 
 const AdminPage = () => {
   const navigation = useNavigation();
+  const auth = getAuth()
+
+  const handleSignOut=()=>{
+  signOut(auth).then(() => {
+    alert("Sign-out successful");
+  }).catch((error) => {
+    alert("An error happened");
+  });
+  }
 
   return (
     <ImageBackground
@@ -83,6 +94,11 @@ const AdminPage = () => {
             </View>
           </View>
         </View>
+        <View style={Styles.signOutBtn} >
+            <TouchableOpacity onPress={handleSignOut}>
+              <Text>Sign Out</Text>
+            </TouchableOpacity>
+        </View>
       </SafeAreaView>
     </ImageBackground>
   );
@@ -110,6 +126,15 @@ const Styles = StyleSheet.create({
     width: "100%",
     height: "100%",
   },
+  signOutBtn:{
+    alignItems:"center",
+    backgroundColor:"red",
+    width:100,
+    justifyContent:"center",
+    alignSelf:"center",
+    padding: 10,
+    borderRadius: 10,
+  }
 });
 
 export default AdminPage;

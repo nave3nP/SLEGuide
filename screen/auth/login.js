@@ -83,9 +83,6 @@ const Login = ()=>{
                 <TouchableOpacity loading={loading} onPress={()=>{navigation.navigate("Signup")}} >
                     <Text style={styles.signup}>Create a new account</Text>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={()=>{navigation.navigate("AdminPage")}}>
-                    <Text style={{textAlign:'center',fontWeight:'bold',color:'#1ee868', fontSize:20, marginTop:20 }}>Admin Login</Text>
-                </TouchableOpacity>
                 <Toast message={error} onDismiss={() => setError('')} />
 
                 </View>

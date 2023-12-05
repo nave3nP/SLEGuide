@@ -1,12 +1,11 @@
 import react from "react";
-import { Authscreens } from "./AuthRouter";
+import { Screens } from "./Screens";
 
 
 
 export default function RootRouter(){
     return(
-        <Authscreens/>
-        
+        <Screens/>       
     );
            
 }
