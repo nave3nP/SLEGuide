@@ -1,30 +1,31 @@
 import React, { Component } from "react";
-import { StyleSheet, View,SafeAreaView, Image,ImageBackground } from "react-native";
-import VehiclesButton from "./components/VehiclesButton";
-import CupertinoHeaderWithAddButton from "./components/CupertinoHeaderWithAddButton";
-import DriversButton from "./components/DriversButton";
+import { StyleSheet, View,SafeAreaView, Image,ImageBackground, Text, TouchableOpacity, Touchable } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 
 function Transport() {
+  const navigation = useNavigation();
   return (
 <SafeAreaView style={{flex:1}}>
 <View style={styles.container}>
-<ImageBackground source={require('../src/bg.png')}>  
+<ImageBackground source={require('../src/bg.png')} style={{height:1000, alignItems:"center"}}> 
+<Text style={styles.title}>Transport</Text> 
 
-<View style={styles.image1Stack}>       
-<VehiclesButton style={styles.cupertinoButtonBlackTextColor}/>
-</View>
       <Image
         source={require("./assets/tservice.png")}
         resizeMode="contain"
-        style={styles.image2}/>
-
-<CupertinoHeaderWithAddButton style={styles.cupertinoHeaderWithAddButton}/>
-<View style={styles.cupertinoButtonBlueTextColor1Stack}>
-<DriversButton style={styles.cupertinoButtonBlueTextColor1}/>
-</View>
-<View style={styles.cupertinoButtonBlueTextColor1Stack}>
-</View>
+        style={styles.image}/>
+      
+      <TouchableOpacity>
+        <View style={styles.button} >
+          <Text style={{fontSize:26, margin:20, alignSelf:"center"}}>Vehicles</Text>
+        </View>
+      </TouchableOpacity>
+      <TouchableOpacity>
+        <View style={styles.button}>
+          <Text style={{fontSize:26, margin:20, alignSelf:"center"}}>Drivers</Text>
+        </View>
+      </TouchableOpacity>
 
 </ImageBackground> 
 </View>
@@ -36,49 +37,26 @@ const styles = StyleSheet.create({
   container: {
     flex: 1
   },
-   cupertinoHeaderWithAddButton: {
-    height: 44,
-    width: 400,
-    marginTop: -250,
-    marginLeft: -7
+  title:{
+    fontWeight: "bold",
+        fontSize: 40,
+        justifyContent: "center",
+        alignSelf: "center",
+        paddingVertical:"10%",
   },
-  cupertinoButtonBlackTextColor: {
-    height: 70,
-    width: 180,
-    position: "absolute",
-    left: 90,
-    top: 0,
-    backgroundColor: "#ffffff",
-    borderRadius: 70
-  },
-  image1Stack: {
-    width: 284,
-    height: 94,
-    marginTop: 349,
-    marginLeft: 26
-  },
-  image2: {
+  image: {
     width: 200,
-    height: 160,
-    marginTop: -341,
-    marginLeft: 97
+    height: 200,
+    alignSelf: "center",
+    marginVertical: 30
   },
-  cupertinoButtonBlueTextColor1: {
-    height: 70,
-    width: 180,
-    position: "absolute",
-    left: 90,
-    top: 0,
-    backgroundColor: "#ffffff",
-    borderRadius: 70
-  },
-  cupertinoButtonBlueTextColor1Stack: {
-    width: 265,
-    height: 89,
-    marginTop: 430,
-    marginLeft: 26,
-    color:"#000000"
-  },
+  button:{
+    backgroundColor: "white",
+    borderRadius: 70,
+    width:200,
+    marginVertical:20
+  
+  }
 
 });
 

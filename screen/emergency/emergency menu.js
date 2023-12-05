@@ -2,7 +2,6 @@ import { useNavigation } from "@react-navigation/native";
 import React, { Component } from "react";
 import { SafeAreaView,ScrollView,StyleSheet, View, Image, ImageBackground, Dimensions} from "react-native";
 import CupertinoHeaderWithAddButton from "./components/CupertinoHeaderWithAddButton";
-import PoliceButton from "./components/police"
 import Tips from "./components/tips";
 import HospitalButton from "./components/hospital";
 
@@ -22,7 +21,6 @@ function Emergency() {
         resizeMode="contain"
         style={styles.image}></Image>
 
-      <PoliceButton style={styles.police}></PoliceButton> 
       <HospitalButton style={styles.hospital} ></HospitalButton>
       <Tips style={styles.tips} ></Tips>
 
@@ -59,14 +57,14 @@ const styles = StyleSheet.create({
     marginLeft: 40
   },
   hospital: {
-    height: 36,
+    height: 50,
     width: 296,
     borderRadius: 80,
-    marginTop: -106,
+    marginTop: 100,
     marginLeft: 40
   },
   tips: {
-    height: 36,
+    height: 50,
     width: 296,
     borderRadius: 80,
     marginTop: 100,
